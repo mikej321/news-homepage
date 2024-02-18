@@ -43,7 +43,7 @@ body
     display: grid
     grid-template-areas: "header" "main" "footer"
     justify-content: center
-    max-width: 25rem
+    max-width: 90vw
     padding-block: 2rem 4rem
     position: relative
     &[menu_open=""]::after
@@ -68,6 +68,7 @@ body
     .container
         max-width: 900px
 
+
 header
     grid-area: header
     display: flex
@@ -78,7 +79,7 @@ header
         display: grid
         grid-template-areas: "logo" "links"
         grid-template-rows: 10rem 1fr
-        min-height: 100vh
+        min-height: 200vh
         min-width: 68%
         align-items: end
         position: absolute
@@ -111,7 +112,7 @@ header
                 color: $soft_red
 
 header .link_container
-    translate: 1px
+    translate: 5vw
     opacity: 1
     transition: opacity 0.05s ease-in-out, translate 0.2s ease-in-out
 
@@ -172,13 +173,14 @@ main
     h1
         grid-area: title
         color: $very_dark_blue
-        line-height: 3rem
         margin-bottom: 2rem
         font-weight: 800
+        font-size: clamp(4rem, 4vw, 6rem)
+        line-height: clamp(4rem, 4vw, 4rem)
     p
-        font-size: 1.1rem
+        font-size: clamp(1.4rem, 2vw, 2.5rem)
+        line-height: clamp(2.2rem, 2vw, 4rem)
         color: $very_dark_blue
-        line-height: 1.8rem
         margin-bottom: 2rem
     .read_more
         max-width: 14rem
@@ -211,7 +213,7 @@ main
             gap: .5rem
             position: relative
             h3
-                font-size: 1.4rem
+                font-size: clamp(1.8rem, 2vw, 2rem)
                 font-weight: 800
                 color: $off_white
                 & a
@@ -221,7 +223,7 @@ main
                     &:hover
                         color: $soft_orange
             p
-                font-size: 1.05rem
+                font-size: clamp(1.4rem, 2vw, 1.6rem)
                 color: $grayish_blue
 
 picture
