@@ -56,7 +56,7 @@ body
         background: rgba(0, 0, 0, 0.5)
         z-index: 0
 
-@media screen and (min-width: 750px)
+@media screen and (min-width: 600px)
     .container
         max-width: 75vw
         &[menu_open=""]::after
@@ -136,7 +136,7 @@ header .link_container[closed=""]
 .open:hover path
     fill: $soft_red
 
-@media screen and (min-width: 750px)
+@media screen and (min-width: 600px)
     header .menu_icons
         display: none
     header .link_container[closed=""],
@@ -175,8 +175,8 @@ main
         color: $very_dark_blue
         margin-bottom: 2rem
         font-weight: 800
-        font-size: clamp(4rem, 4vw, 6rem)
-        line-height: clamp(4rem, 4vw, 4rem)
+        font-size: clamp(4rem, 11vw, 8rem)
+        line-height: clamp(4rem, 11vw, 8rem)
     p
         font-size: clamp(1.4rem, 2vw, 2.5rem)
         line-height: clamp(2.2rem, 2vw, 4rem)
@@ -213,7 +213,7 @@ main
             gap: .5rem
             position: relative
             h3
-                font-size: clamp(1.8rem, 2vw, 2rem)
+                font-size: clamp(1.8rem, 5vw, 4rem)
                 font-weight: 800
                 color: $off_white
                 & a
@@ -234,7 +234,7 @@ picture
     display: flex
     flex-direction: column
 
-@media screen and (min-width: 750px)
+@media screen and (min-width: 600px)
     main
         grid-template-areas: "image image other_articles" "title info other_articles"
         grid-template-columns: 29rem 1fr 1fr
@@ -255,7 +255,7 @@ picture
     .article_info
         justify-content: space-between
 
-@media screen and (min-width: 750px)
+@media screen and (min-width: 600px)
     main .new_articles
         margin-bottom: 0
     main .new_articles h2
@@ -302,7 +302,7 @@ picture
                 margin-bottom: .5rem
             .other_article_title
                 font-weight: 800
-                font-size: 1.4rem
+                font-size: clamp(1.4rem, 5vw, 2.5rem)
                 color: $very_dark_blue
                 margin-bottom: .5rem
                 & a 
@@ -312,17 +312,22 @@ picture
                     &:hover
                         color: $soft_red
             .other_article_info
-                font-size: 1.2rem
+                font-size: clamp(1.3rem, 4vw, 2.5rem)
                 color: $dark_grayish_blue
-                line-height: 1.75rem
+                line-height: clamp(1.75rem, 7vw, 3rem)
 
-@media screen and (min-width: 750px)
+@media screen and (min-width: 600px)
     .other_articles_container
         display: grid
         grid-template-areas: "article_1 article_2 article_3"
         grid-template-columns: 29rem 1fr 1fr
         .other_article .other_article_content
             max-width: 18rem
+            .other_article_info
+                font-size: 1.3rem
+                line-height: 1.75rem
+            .other_article_title
+                font-size: 1.4rem
                 
 footer
     grid-area: footer
